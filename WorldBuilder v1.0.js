@@ -1,7 +1,7 @@
 /*/
  *#######################################################################
  *WorldBuilder v1.0
- *Copyright (C) 2017-2020 Genbu Project & Genbu Hase All Rights Reversed.
+ *Copyright (C) 2017 Genbu Project & Genbu Hase All Rights Reversed.
  *#######################################################################
 /*/
 const WorldBuilder = (function () {
