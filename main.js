@@ -1,0 +1,1 @@
+let base = new WorldBuilder(10, 50, 10);

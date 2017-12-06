@@ -8,28 +8,12 @@
 		<Script Src = "assets/includes/three.js"></Script>
 		<Script Src = "assets/includes/OrbitControls.js"></Script>
 		<Script Src = "assets/includes/FlyControls.js"></Script>
-		
-		<Script Src = "WorldBuilder v1.0.js"></Script>
 
-		<Script>
-			window.addEventListener("DOMContentLoaded", function () {
-				window.Base = new WorldBuilder({
-					width: window.innerWidth,
-					height: window.innerHeight
-				});
+		<Script Src = "assets/includes/DOM Extender v3.3.js"></Script>
+		<Script Src = "WorldBuilder v1.1.js"></Script>
 
-				window.Stone = new WorldBuilder.Block();
-			});
-		</Script>
-
-		<Style>
-			HTML, Body {
-				Height: 100%;
-
-				Margin: 0;
-				Overflow: Hidden;
-			}
-		</Style>
+		<Script Src = "main.js" Defer = "Defer"></Script>
+		<Link Rel = "StyleSheet" Href = "main.css" />
 	</Head>
 	
 	<Body>
