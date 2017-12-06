@@ -66,14 +66,6 @@ class WorldBuilder {
 					super.back = "assets/images/blocks/Grass/bottom.png";
 					super.top = super.bottom = super.left = super.right = "assets/images/blocks/Grass/side.png";
 				}
-			},
-
-			KasuteraBlock: class KasuteraBlock extends WorldBuilder.Block {
-				constructor () {
-					super();
-
-					super.forward = "assets/images/blocks/KasuteraBlock/top.png"
-				}
 			}
 		}
 	}
@@ -99,21 +91,12 @@ class WorldBuilder {
 
 		let camera = this.camera = new THREE.PerspectiveCamera(50, DOM.width / DOM.height, 0.1, 1000000);
 			camera.position.set(0, WorldBuilder.Block.SIZE.Y * 2, 0);
-			camera.lookAt(width, WorldBuilder.Block.SIZE.Y * 2, depth);
+			camera.lookAt(0, WorldBuilder.Block.SIZE.Y * 2, depth);
 			
-			new THREE.OrbitControls(camera);
+			//new THREE.OrbitControls(camera);
 
 		let axesHelper = new THREE.AxesHelper(width);
 			scene.add(axesHelper);
-
-		let sun = this.sun = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.TextureLoader().load("assets/images/sun.png") }));
-			sun.position.set(width / 2, height / 2, depth / 2);
-			scene.add(sun);
-
-		let sunLight = this.sunLight = new THREE.DirectionalLight(0xFFCCCC);
-			sunLight.position.set(width / 2, height / 2, depth / 2);
-
-			scene.add(sunLight);
 
 		for (let mx = 0; mx < x; mx++) {
 			for (let mz = 0; mz < z; mz++) {
