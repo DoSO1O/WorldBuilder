@@ -93,7 +93,7 @@ class WorldBuilder {
 			camera.position.set(0, WorldBuilder.Block.SIZE.Y * 2, 0);
 			camera.lookAt(0, WorldBuilder.Block.SIZE.Y * 2, depth);
 			
-			//new THREE.OrbitControls(camera);
+			new THREE.OrbitControls(camera);
 
 		let axesHelper = new THREE.AxesHelper(width);
 			scene.add(axesHelper);
